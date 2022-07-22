@@ -12,7 +12,9 @@
         <a href="/">Home</a>
         <a href="/">Live Feed</a>
         <% if (user) { %>
-          <a href="/">New Project</a>
+          <a href="/projects/my">My Projects</a>
+          <a href="/projects/my/new">New Project</a>
+          <img src="<%= user.avatar %>"><span><%= user.name %></span>
           <a href="/logout">LOG OUT</a>
         <% } else { %>
           <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>

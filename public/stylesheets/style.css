@@ -79,7 +79,7 @@ nav {
 #active-user > a, #active-user > a:visited, #active-user > a:hover {
   text-decoration: none;
   font-size: 1.5rem;
-  color: rbga(87,31,120,0.5);
+  color: rgba(87, 31, 120, 0.5);
 }
 
 #active-user-avatar {
@@ -115,20 +115,59 @@ nav > a:hover {
 
 
 /* ------- LIVE FEED SECTION ------- */
-.live-feed {
-  text-align: center;
-  font-size: 5rem;
+
+#live-feed-container {
+  width: 45%;
+  margin: 0 auto;
 }
 
 #live-feed-tile {
-  border: 1px solid black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+  border: 1px dashed black;
+}
+
+#live-feed-tile:nth-child(odd) {
+  flex-direction: row;
+  background-color: rgb(2, 216, 228);
+}
+
+#live-feed-tile:nth-child(even) {
+  flex-direction: row-reverse;
+  background-color: rgb(207, 63, 138);
+}
+
+.creator {
+  display: flex;
   align-items: center;
   font-size: 3rem;
+}
+
+.creator > img /*avatar img*/ {
+  align-self: center;
+  border-radius: 50%;
+  height: 5rem;
+  margin: 0 1rem;
+}
+
+.tile > img {
+  height: 40rem;
+  display: flex;
+  align-self: center;
+}
+
+.details {
+  display: flex;
   flex-direction: column;
-  padding: 1rem;
-  background-color: skyblue;
+  font-size: 3rem;
+  text-align: left;
+  padding: 0 5rem;
+}
+
+.details > h5 {
+  font-size: 4rem;
 }
 
 /* ------- MY PROJECTS SECTION ------- */

@@ -1,9 +1,23 @@
 <%- include('../partials/header') %>
-<br>
-<br>
-<br>
-<p class="live-feed">THIS PAGE WILL SHOW MY LIVE FEED</p>
-<br>
-<br>
-<br>
+
+<div id="live-feed-container">
+<% if (projects.length) { %>
+    <% projects.forEach(function(p) { %>
+
+        <div id="live-feed-tile">
+            <h5><%= p.title %></h5>
+            <p><b><i>Creator:</i></b> <%= p.creator.name %></p>
+            <img src="<%= p.image %>">
+            <p><b><i>Start Date:</i></b> <%= p.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
+            <p><b><i>Difficulty:</i></b> <%= p.difficulty %></p>
+            <p><b><i>Description:</i></b> <%= p.description %></p>
+            <p><b><i>Complete:</i></b> <%= p.complete ? 'Yes' : 'No' %></p>
+        </div>
+        
+    <% }) %>
+
+<% } else { %>
+    <p id="no-projects">You do not have any projects - add one above!</p>
+<% } %>
+</div>
 <%- include('../partials/footer') %>

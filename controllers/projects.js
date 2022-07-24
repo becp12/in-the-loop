@@ -8,8 +8,13 @@ module.exports = {
 }
 
 function index(req, res) {
-    res.render('projects/live-feed', { title: 'Live Feed'})
-}
+    Project.find({})
+            .sort('startDate')
+            .populate('creator')
+            .exec(function(err, projects) {
+                res.render('projects/live-feed', { title: 'Live Feed', projects });
+            });
+};
 
 function myIndex(req, res) {
     Project.find({ creator: req.user._id }, function(err, projects) {

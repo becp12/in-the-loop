@@ -11,6 +11,21 @@ body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+button {
+  height: 3rem;
+  border-radius: 2rem;
+  width: 25rem;
+  border: 0.2rem solid darkblue;
+  background-color: lightskyblue;
+  color: darkblue;
+}
+
+button:hover {
+  border: 0.2rem solid #571f78;
+  background-color: #bb70e6;
+  color: #571f78
+}
+
 /* ------- BANNER SECTION ------- */
 
 #banner {
@@ -105,6 +120,17 @@ nav > a:hover {
   font-size: 5rem;
 }
 
+#live-feed-tile {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: skyblue;
+}
+
 /* ------- MY PROJECTS SECTION ------- */
 /* INDEX VIEW */
 #my-project-header {
@@ -117,6 +143,7 @@ nav > a:hover {
 
 #my-project-header > h1 {
   font-size: 4rem;
+  padding-bottom: 1rem;
 }
 
 #my-project-header > a {
@@ -139,10 +166,24 @@ nav > a:hover {
   font-size: 3rem;
   flex-direction: column;
   padding: 1rem;
+  background-color: skyblue;
 }
 
 #my-project-tile > img {
   height: 50rem;
+}
+
+#my-project-tile > h5 {
+  font-size: 3rem;
+}
+
+#my-project-tile > p {
+  font-size: 2rem;
+}
+
+#no-projects {
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 /* ------- FOOTER SECTION ------- */

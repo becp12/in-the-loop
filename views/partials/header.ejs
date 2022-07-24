@@ -8,15 +8,25 @@
     <title>In The Loop - <%= title %></title>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/">Live Feed</a>
-        <% if (user) { %>
-          <a href="/projects/my">My Projects</a>
-          <a href="/projects/my/new">New Project</a>
-          <img src="<%= user.avatar %>"><span><%= user.name %></span>
-          <a href="/logout">LOG OUT</a>
-        <% } else { %>
-          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } %>
-    </nav>
+  <!-- <header id="banner">
+    <img src="/images/alternate-banner.png" alt="Website Banner with the words In The Loop">
+  </header> -->
+  <nav>
+    <div id="banner-image">
+      <a href="/">
+        <img id="yarn-ball" src="/images/yarn-ball.png" alt="Ball of yarn">
+        <img id="banner-picture" src="/images/alternate-banner.png" alt="Website Banner with the words In The Loop"></a>
+    </div>
+    <a href="/">Live Feed</a> <!-- IF MY HOME BUTTON DOES THE SAME THING AS THIS LINK, SHOULD I REMOVE THIS LINK AND MAYBE RENAME MY HOME LINK?-->
+    <% if (user) { %>
+      <a href="/projects/my">My Projects</a>
+      <a href="/projects/my/new">New Project</a>
+      <div id="active-user">
+        <div id="active-user-avatar"><img src="<%= user.avatar %>"></div>
+        <span>Welcome, <%= user.firstName %>!</span>
+        <a href="/logout">[Log Out]</a>
+      </div>
+    <% } else { %>
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+    <% } %>
+   </nav>

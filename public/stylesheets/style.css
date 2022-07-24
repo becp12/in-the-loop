@@ -1,19 +1,132 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+html {
+  font-size: 10px;
 }
+
+body {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* ------- BANNER SECTION ------- */
+
+/* #banner {
+  background-color: lightblue;
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  /* justify-content: center; */
+  /*align-items: center;
+}
+
+#banner > img {
+  height: 10rem;
+} */
+
+/* ------- NAVIGATION SECTION ------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding-right: 15rem;
+  color: #bb70e6;
+  font-size: 2rem;
+  height: 9rem;
+}
+
+#banner-image > a > img {
+  align-self: center;
+  height: 8rem;
+  top: 0;
+  position: absolute;
+}
+
+#banner-picture {
+  margin-left: 2rem;
+  z-index: -10;
+}
+
+#banner-image {
+  display: flex;
+  align-items: center;
+}
+
+/* NOT LOGGED IN SELECTORS */
 
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 34px;
+  height: 3.4rem;
 }
 
 .login img {
-  height: 30px;
+  height: 3rem;
+}
+
+/* ACTIVE USER SELECTORS */
+
+#active-user {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  color: #571f78;
+}
+
+#active-user > a, #active-user > a:visited, #active-user > a:hover {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rbga(87,31,120,0.5);
+}
+
+#active-user-avatar {
+  grid-row: span 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#active-user-avatar > img {
+  border-radius: 50%;
+  height: 4.5rem;
+}
+
+#active-user > span, #active-user > a, #active-user > a:visited, #active-user > a:hover {
+  text-align: center;
+  align-self: center;
+  padding-left: 1rem;
+}
+
+/* OTHER NAV LINK STYLING */
+
+nav > a, nav > a:visited {
+  text-decoration: none;
+  align-items: center;
+  color: #bb70e6;
+}
+
+nav > a:hover {
+  color: #571f78;
+  background-color: #d4aeeb;
+}
+
+
+/* ------- LIVE FEED SECTION ------- */
+.live-feed {
+  text-align: center;
+  font-size: 5rem;
+}
+
+/* ------- FOOTER SECTION ------- */
+footer {
+  height: 5rem;
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
+  padding: 2rem;
 }

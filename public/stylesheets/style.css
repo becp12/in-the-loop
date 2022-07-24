@@ -105,6 +105,46 @@ nav > a:hover {
   font-size: 5rem;
 }
 
+/* ------- MY PROJECTS SECTION ------- */
+/* INDEX VIEW */
+#my-project-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem;
+}
+
+#my-project-header > h1 {
+  font-size: 4rem;
+}
+
+#my-project-header > a {
+  font-size: 2rem;
+}
+
+#my-project-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+#my-project-tile {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#my-project-tile > img {
+  height: 50rem;
+}
+
 /* ------- FOOTER SECTION ------- */
 footer {
   height: 5rem;

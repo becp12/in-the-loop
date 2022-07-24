@@ -1,21 +1,30 @@
 <%- include('../partials/header') %>
 
-<h1>My Projects</h1>
-<a href="/projects/my/new">Add New Projects</a>
+<div id="my-project-header">
+    <h1>My Projects</h1>
+    <a href="/projects/my/new">Add New Project</a>
+</div>
+
+<div id="my-project-container">
 <% if (projects.length) { %>
     <% projects.forEach(function(p) { %>
-        <div>
+
+        <div id="my-project-tile">
             <h5><%= p.title %></h5>
+            <p>Creator: <%= user.name %></p>
             <img src="<%= p.image %>">
-            <h6>Start Date: <%= p.startDate %></h6>
-            <h6>Difficulty: <%= p.difficulty %></h6>
-            <h6>Description: <%= p.description %></h6>
-            <h6>Complete: <%= p.complete ? 'Yes' : 'No' %></h6>
+            <p>Start Date: <%= p.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
+            <p>Difficulty: <%= p.difficulty %></p>
+            <p>Description: <%= p.description %></p>
+            <p>Complete: <%= p.complete ? 'Yes' : 'No' %></p>
         </div>
+
     <% }) %>
+
 <% } else { %>
     <h5>You have not added any projects.</h5>
     <a href="/projects/my/new"><button>Add New Project</button></a>
 <% } %>
+</div>
 
 <%- include('../partials/footer') %>

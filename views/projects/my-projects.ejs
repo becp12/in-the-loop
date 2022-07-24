@@ -2,6 +2,20 @@
 
 <h1>My Projects</h1>
 <a href="/projects/my/new">Add New Projects</a>
-
+<% if (projects.length) { %>
+    <% projects.forEach(function(p) { %>
+        <div>
+            <h5><%= p.title %></h5>
+            <img src="<%= p.image %>">
+            <h6>Start Date: <%= p.startDate %></h6>
+            <h6>Difficulty: <%= p.difficulty %></h6>
+            <h6>Description: <%= p.description %></h6>
+            <h6>Complete: <%= p.complete ? 'Yes' : 'No' %></h6>
+        </div>
+    <% }) %>
+<% } else { %>
+    <h5>You have not added any projects.</h5>
+    <a href="/projects/my/new"><button>Add New Project</button></a>
+<% } %>
 
 <%- include('../partials/footer') %>

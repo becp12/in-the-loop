@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<form action="/projects/my" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title" required>
+    
+    <label>Image (link to photo):</label>
+    <input type="text" name="image">
+    
+    <label>Start Date:</label>
+    <input type="datetime-local" name="startDate" value="<%= defaultStartDate %>">
+    
+    <label>Difficulty:</label>
+    <select name="difficulty" required>
+        <option value="Beginner" selected>Beginner</option>
+        <option value="Easy">Easy</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Experienced">Experienced</option>
+    </select>
+    
+    <label>Description (eg. Details, stiches used, pattern link, etc):</label>
+    <input type="text" name="description">
+
+    <label>Complete:</label>
+    <input type="checkbox" name="complete">
+
+    <input type="submit" value="Add Project">
+</form>
+
+<%- include('../partials/footer') %>

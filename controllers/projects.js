@@ -9,7 +9,7 @@ module.exports = {
 
 function index(req, res) {
     Project.find({})
-            .sort([['startDate', -1]])
+            .sort('-startDate')
             .populate('creator')
             .exec(function(err, projects) {
                 res.render('projects/live-feed', { title: 'Live Feed', projects });
@@ -17,8 +17,10 @@ function index(req, res) {
 };
 
 function myIndex(req, res) {
-    Project.find({ creator: req.user._id }, function(err, projects) {
-        res.render('projects/my-projects', { title: 'My Projects', projects });
+    Project.find({ creator: req.user._id })
+            // .sort([['complete']])
+            .exec(function(err, projects) {
+                res.render('projects/my-projects', { title: 'My Projects', projects });
     });
 }
 

@@ -8,4 +8,7 @@ const projectsCtrl = require('../controllers/projects');
 // GET /projects (index functionality)
 router.get('/', projectsCtrl.index);
 
+// GET /projects/my (index functionality
+router.get('/my', projectsCtrl.myIndex)
+
 module.exports = router;

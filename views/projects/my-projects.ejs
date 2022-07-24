@@ -3,13 +3,17 @@
 <div id="my-project-header">
     <h1>My Projects</h1>
     <a href="/projects/my/new"><button>Add New Project</button></a>
+    <div class="color-code">
+        <div class="green"></div><p>Project is <b>Complete</b></p>
+        <div class="blue"></div><p>Project is <b>In Progress</b></p>
+    </div>
 </div>
 
 <div id="my-project-container">
 <% if (projects.length) { %>
     <% projects.forEach(function(p) { %>
 
-        <div id="my-project-tile">
+        <div id="my-project-tile" class="<%= p.complete ? 'green' : 'blue'%>">
             <h5><%= p.title %></h5>
             <p><b><i>Creator:</i></b> <%= user.name %></p>
             <img src="<%= p.image %>">

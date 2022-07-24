@@ -12,18 +12,20 @@ body {
 }
 
 button {
-  height: 3rem;
+  height: 5rem;
   border-radius: 2rem;
   width: 25rem;
   border: 0.2rem solid darkblue;
   background-color: lightskyblue;
   color: darkblue;
+  font-size: 2rem;
+  padding: 1rem 0;
 }
 
 button:hover {
-  border: 0.2rem solid #571f78;
-  background-color: #bb70e6;
-  color: #571f78
+  border: 0.2rem solid darkgreen;
+  background-color: lightgreen;
+  color: darkgreen;
 }
 
 /* ------- BANNER SECTION ------- */
@@ -116,6 +118,30 @@ nav > a:hover {
 
 /* ------- LIVE FEED SECTION ------- */
 
+#more-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 4rem;
+  margin: 2rem;
+}
+
+#more-login > a {
+  text-decoration: none;
+  margin: 2rem 0;
+}
+
+#more-login > a > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-icon {
+  height: 4rem;
+}
+
 #live-feed-container {
   width: 45%;
   margin: 0 auto;
@@ -132,11 +158,13 @@ nav > a:hover {
 #live-feed-tile:nth-child(odd) {
   flex-direction: row;
   background-color: rgb(2, 216, 228);
+  color: rgb(0, 56, 59);
 }
 
 #live-feed-tile:nth-child(even) {
   flex-direction: row-reverse;
   background-color: rgb(207, 63, 138);
+  color: rgb(73, 22, 48);
 }
 
 .creator {
@@ -187,6 +215,20 @@ nav > a:hover {
 
 #my-project-header > a {
   font-size: 2rem;
+  margin: 2rem 0 0 0;
+}
+
+#my-project-header > .color-code {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin: 3rem 0 0 0;
+}
+
+#my-project-header > .color-code > div {
+  margin: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 #my-project-container {
@@ -198,14 +240,23 @@ nav > a:hover {
 }
 
 #my-project-tile {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
   flex-direction: column;
   padding: 1rem;
+  margin: 2rem 2rem;
+}
+
+.green {
+  background-color: lightgreen;
+  border: 0.2rem solid darkgreen;
+}
+
+.blue {
   background-color: skyblue;
+  border: 0.2rem solid darkblue;
 }
 
 #my-project-tile > img {

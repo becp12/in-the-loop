@@ -2,7 +2,20 @@
 
 <div id="live-feed-container">
 <% if (projects.length) { %>
-    <% projects.forEach(function(p) { %>
+    <% for (let idx = 0; idx < projects.length; idx++) { %>
+        <% const p = projects[idx]; %>
+        <% if (idx > 1 && !user) { %>
+            <div id="more-login">
+                <p>Log in with Google to see more posts</p>
+                <a href="/auth/google">
+                    <button>
+                        <img class="google-icon" src="https://i.imgur.com/FHjYyi0.png">
+                        <p>&nbsp;Log In</p>
+                    </button>
+                </a>
+            </div>
+            <% break; %>
+        <% } %>
 
         <div id="live-feed-tile">
             <div class="details">
@@ -23,10 +36,10 @@
             </div>
         </div>
         
-    <% }) %>
+    <% } %>
 
 <% } else { %>
-    <p id="no-projects">You do not have any projects - add one above!</p>
+    <p id="no-projects">There are no posts to show</p>
 <% } %>
 </div>
 <%- include('../partials/footer') %>

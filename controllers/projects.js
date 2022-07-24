@@ -9,7 +9,7 @@ module.exports = {
 
 function index(req, res) {
     Project.find({})
-            .sort('startDate')
+            .sort([['startDate', -1]])
             .populate('creator')
             .exec(function(err, projects) {
                 res.render('projects/live-feed', { title: 'Live Feed', projects });

@@ -8,15 +8,10 @@
     <title>In The Loop - <%= title %></title>
 </head>
 <body>
-  <!-- <header id="banner">
-    <img src="/images/alternate-banner.png" alt="Website Banner with the words In The Loop">
-  </header> -->
+  <header id="banner">
+    <a href="/"><img src="/images/alternate-banner.png" alt="Website Banner with the words In The Loop"></a>
+  </header>
   <nav>
-    <div id="banner-image">
-      <a href="/">
-        <img id="yarn-ball" src="/images/yarn-ball.png" alt="Ball of yarn">
-        <img id="banner-picture" src="/images/alternate-banner.png" alt="Website Banner with the words In The Loop"></a>
-    </div>
     <a href="/">Live Feed</a> <!-- IF MY HOME BUTTON DOES THE SAME THING AS THIS LINK, SHOULD I REMOVE THIS LINK AND MAYBE RENAME MY HOME LINK?-->
     <% if (user) { %>
       <a href="/projects/my">My Projects</a>

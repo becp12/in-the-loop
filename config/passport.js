@@ -24,6 +24,8 @@ passport.use(new GoogleStrategy(
       // When using async/await to consume promises, there is no use of .then or .catch, so weuse a try/catch block to handle an error
       try {
         user = await User.create({
+          firstName: profile.name.givenName,
+          lastName: profile.name.familyName,
           name: profile.displayName,
           googleId: profile.id,
           email: profile.emails[0].value,

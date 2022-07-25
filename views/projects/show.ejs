@@ -1,0 +1,46 @@
+<%- include('../partials/header') %>
+
+<div id="project-details">
+    <div id="show-title-creator">
+        <h2><%= project.title %></h2>
+        <div id="show-creator-detail">
+            <h4 ><%= project.creator.name %></h4>
+            <img src="<%= project.creator.avatar %>">
+        </div>
+    </div>
+    <div id="show-project-info">
+        <div>
+            <p>Start Date:</p>
+            <p><%= project.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
+            <p>Difficulty:</p>
+            <p><%= project.difficulty %></p>
+            <p>Description:</p>
+            <p><%= project.description %></p>
+        </div>
+        <div>
+            <img src="<%= project.image %>">
+        </div>
+    </div>
+</div>
+
+<div>
+    <h4>Comments</h4>
+    <div id="comment">
+        <% if (project.comment.length) { %>
+            <% project.comment.forEach(function(c) { %>
+                <img src="<%= c.userAvatar %>" alt="avatar"><p><%= c.userName %></p>
+                <p><%= c.createdAt.toLocaleDateString() %></p>
+                <p><%= c.content %></p>
+            <% }); %>
+        <% } else { %>
+            <p>This project has no comments yet.</p>
+        <% } %>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('../partials/footer') %>

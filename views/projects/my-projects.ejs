@@ -20,7 +20,8 @@
             <p><b><i>Start Date:</i></b> <%= p.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
             <p><b><i>Difficulty:</i></b> <%= p.difficulty %></p>
             <p><b><i>Description:</i></b> <%= p.description %></p>
-            <p><b><i>Complete:</i></b> <%= p.complete ? 'Yes' : 'No' %></p>
+            <p><b><i>Complete:</i></b> <%= p.complete ? 'Yes' : 'In Progress' %></p>
+            <p><b><i><a href="/projects/my/<%= p._id %>">See more</a></i></b></p>
         </div>
 
     <% }) %>

@@ -276,6 +276,31 @@ nav > a:hover {
   margin-bottom: 2rem;
 }
 
+/* ------- SHOW VIEW ------- */
+#project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#show-creator-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#show-project-info {
+  display: flex;
+  align-items: center;
+}
+
+#project-details img {
+  height: 10rem;
+}
+
+
 /* ------- FOOTER SECTION ------- */
 footer {
   height: 5rem;

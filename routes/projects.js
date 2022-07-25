@@ -14,6 +14,9 @@ router.get('/my', isLoggedIn, projectsCtrl.myIndex)
 // GET /projects/my/new (new functionality
 router.get('/my/new', isLoggedIn, projectsCtrl.new)
 
+// GET /posts/:id (show functionality)
+router.get('/my/:id', projectsCtrl.show)
+
 // POST /projects/my (create functionality)
 router.post('/my', isLoggedIn, projectsCtrl.create)
 

@@ -5,6 +5,7 @@ module.exports = {
     myIndex,
     new: newProject,
     create,
+    show,
 }
 
 function index(req, res) {
@@ -44,3 +45,11 @@ function create(req, res) {
         res.redirect('/projects/my');
     })
 }
+
+function show(req, res) {
+Project.findById(req.params.id)
+        .populate('creator')
+        .exec(function (err, project) {
+            res.render('projects/show', { title: 'title', project})
+        });
+};

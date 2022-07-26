@@ -11,7 +11,7 @@ function create(req, res) {
         req.body.userAvatar = req.user.avatar;
         project.comment.push(req.body);
         project.save(function(err) {
-            res.redirect(`/projects/my/${project._id}`);
+            res.redirect(`/projects/${project._id}`);
         });
     });
 };

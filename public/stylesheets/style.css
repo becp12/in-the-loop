@@ -343,9 +343,9 @@ nav > a:hover {
 #comment-details {
   display: grid;
   grid-template-rows: 2.5rem fit-content(100%);
-  grid-template-columns: 5rem 20rem 100rem;
+  grid-template-columns: 5rem 20rem 100rem 5rem;
   margin: 2rem auto;
-  width: 125rem;
+  width: 130rem;
   font-size: 1.5rem;
 }
 

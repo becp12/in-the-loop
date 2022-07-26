@@ -49,7 +49,8 @@ function create(req, res) {
 function show(req, res) {
 Project.findById(req.params.id)
         .populate('creator')
+        .populate('comment.user')
         .exec(function (err, project) {
-            res.render('projects/show', { title: project.title, project})
+            res.render('projects/show', { title: project.title, project} )
         });
 };

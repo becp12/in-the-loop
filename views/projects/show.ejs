@@ -26,6 +26,14 @@
 <div>
     <h4>Comments</h4>
     <div id="comment">
+        <% if (user) {%>
+            <form action="/projects/my/<%= project._id %>/comments" method="POST">
+                <label>Leave comment here</label>
+                <input type="text" name="content">
+
+                <input type="submit" value="Post comment">
+            </form>
+        <% } %>
         <% if (project.comment.length) { %>
             <% project.comment.forEach(function(c) { %>
                 <img src="<%= c.userAvatar %>" alt="avatar"><p><%= c.userName %></p>

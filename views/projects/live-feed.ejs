@@ -30,6 +30,7 @@
                 <p><b><i>Difficulty:</i></b> <%= p.difficulty %></p>
                 <p><b><i>Description:</i></b> <%= p.description %></p>
                 <p><b><i>Complete:</i></b> <%= p.complete ? 'Yes' : 'In Progress' %></p>
+                <a href="/projects/<%= p._id %>"><button>See more</button></a>
             </div>
             <div class="tile">
                 <img src="<%= p.image %>">

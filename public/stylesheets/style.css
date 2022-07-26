@@ -301,6 +301,71 @@ nav > a:hover {
 }
 
 
+/* COMMENT SECTION */
+
+#comment {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  flex-direction: column;
+  margin: 0 5rem;
+
+}
+
+#comment > * {
+  padding: 1rem;
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#comment-form > input[type="submit"] {
+  width: 50%;
+  align-self: flex-end;
+}
+
+#comment-form > textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  /* width: 125rem; */
+}
+
+#comment-text {
+  width: 50rem;
+  height: 5rem;
+}
+
+#comment-content {
+  grid-column: 2 / span 2;
+}
+
+#comment-details {
+  display: grid;
+  grid-template-rows: 2.5rem fit-content(100%);
+  grid-template-columns: 5rem 20rem 100rem;
+  margin: 2rem auto;
+  width: 125rem;
+  font-size: 1.5rem;
+}
+
+#comment-details > img {
+  height: 5rem;
+  border-radius: 50%;
+  grid-row: span 2;
+}
+
+#comment-date, #comment-author, #comment-content {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+
+}
+
+#comment-content {
+  overflow-wrap: anywhere;
+}
+
 /* ------- FOOTER SECTION ------- */
 footer {
   height: 5rem;

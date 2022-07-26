@@ -27,18 +27,23 @@
     <h4>Comments</h4>
     <div id="comment">
         <% if (user) {%>
-            <form action="/projects/my/<%= project._id %>/comments" method="POST">
+            <form action="/projects/<%= project._id %>/comments" method="POST" id="comment-form">
                 <label>Leave comment here</label>
-                <input type="text" name="content">
-
+                <textarea type="text" name="content" id="comment-text"></textarea>
                 <input type="submit" value="Post comment">
             </form>
         <% } %>
+    </div>
+    <div>   
         <% if (project.comment.length) { %>
             <% project.comment.forEach(function(c) { %>
-                <img src="<%= c.userAvatar %>" alt="avatar"><p><%= c.userName %></p>
-                <p><%= c.createdAt.toLocaleDateString() %></p>
-                <p><%= c.content %></p>
+                <div id="comment-details">
+                    <img src="<%= c.userAvatar %>" alt="avatar">
+                    <p id="comment-author"><b><%= c.userName %></b></p>
+                    <p id="comment-date"><%= c.createdAt.toLocaleDateString() %></p>
+                    <p id="comment-content"><%= c.content %></p>
+                </div>
+                
             <% }); %>
         <% } else { %>
             <p>This project has no comments yet.</p>

@@ -84,7 +84,11 @@ function edit(req, res) {
     Project.findById(req.params.id)
         .populate('creator')
         .exec(function(err, project) {
+            const dt = project.startDate;
+            // Format the date for the value attribute of the input
+            let startDate = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}`;
+            startDate += `-${dt.getDate().toString().padStart(2, '0')}T${dt.toTimeString().slice(0, 5)}`;
             if (err) return res.redirect('/projects/edit');
-            res.render('projects/update', {title: 'Update Project', project})
+            res.render('projects/update', {title: 'Update Project', project, startDate})
     })
 }

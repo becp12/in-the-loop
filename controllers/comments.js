@@ -10,7 +10,7 @@ function create(req, res) {
         req.body.user = req.user._id;
         req.body.userName = req.user.name;
         req.body.userAvatar = req.user.avatar;
-        project.comment.push(req.body);
+        project.comments.push(req.body);
         project.save(function(err) {
             res.redirect(`/projects/${project._id}`);
         });
@@ -19,9 +19,9 @@ function create(req, res) {
 
 function deleteComment(req, res) {
     Project.findOne(
-        {'comment._id': req.params.id, 'comment.user': req.user._id},
+        {'comments._id': req.params.id, 'comments.user': req.user._id},
         function(err, project) {
-            project.comment.remove(req.params.id);
+            project.comments.remove(req.params.id);
             project.save(function(err) {
                 res.redirect(`/projects/${project._id}`);
             });

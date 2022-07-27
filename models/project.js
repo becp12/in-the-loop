@@ -13,7 +13,7 @@ const commentSchema = new Schema({
 const projectSchema = new Schema({
     creator: {type: Schema.Types.ObjectId, ref: 'User'},
     title: String,
-    image: String,
+    image: [String],
     startDate: {
         type: Date,
         default: function() {
@@ -30,7 +30,7 @@ const projectSchema = new Schema({
         type: Boolean,
         default: false,
     },
-    comment: [commentSchema],
+    comments: [commentSchema],
     }, {
     timestamps: true
   });

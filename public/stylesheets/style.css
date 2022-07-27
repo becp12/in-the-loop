@@ -373,18 +373,30 @@ font-size: 3rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+#show-creator-detail > img {
+  height: 5rem;
+  border-radius: 50%;
+  margin: 0 1rem;
 }
 
 #show-project-info {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  font-size: 2rem;
 }
 
-#project-details img {
-  height: 10rem;
+#show-project-info > div {
+  margin: 1rem 6rem;
 }
 
-
+#show-project-info > div > img {
+  height: 40rem;
+}
 
 /* COMMENT SECTION */
 

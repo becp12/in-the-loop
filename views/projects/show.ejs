@@ -10,8 +10,8 @@
         <% } %>
     </div>
     <div id="show-creator-detail">
-        <h4 ><%= project.creator.name %></h4>
         <img src="<%= project.creator.avatar %>">
+        <h4 ><%= project.creator.name %></h4>
     </div>
     <div id="show-project-info">
         <div>
@@ -40,8 +40,8 @@
         <% } %>
     </div>
     <div>   
-        <% if (project.comment.length) { %>
-            <% project.comment.forEach(function(c) { %>
+        <% if (project.comments.length) { %>
+            <% project.comments.forEach(function(c) { %>
                 <div id="comment-details">
                     <img src="<%= c.userAvatar %>" alt="avatar">
                     <p id="comment-author"><b><%= c.userName %></b></p>

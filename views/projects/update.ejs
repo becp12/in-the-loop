@@ -23,7 +23,7 @@
     <input type="text" name="description" value="<%= project.description %>">
 
     <label>Complete:</label>
-    <input type="checkbox" name="complete">
+    <input type="checkbox" name="complete" <%= project.complete ? 'checked' : '' %>>
 
     <input type="submit" value="Update Project">
 </form>

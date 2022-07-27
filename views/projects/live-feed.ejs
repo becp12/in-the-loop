@@ -19,6 +19,7 @@
 
         <div id="live-feed-tile">
             <div class="details">
+                
                 <h5><%= p.title %></h5>
                 <br>
                 <div class="creator">
@@ -30,7 +31,11 @@
                 <p><b><i>Difficulty:</i></b> <%= p.difficulty %></p>
                 <p><b><i>Description:</i></b> <%= p.description %></p>
                 <p><b><i>Complete:</i></b> <%= p.complete ? 'Yes' : 'In Progress' %></p>
-                <a href="/projects/<%= p._id %>"><button>See more</button></a>
+                                <div id="edit-delete-buttons">
+                    <a href="/projects/<%= p._id %>"><img src="/images/see-more-icon.png" alt="search icon" id="see-more-project-button-live"></a>
+                    <a href="#"><img src="/images/edit-icon.png" alt="edit icon" id="edit-project-button-live"></a>
+                    <a href="#"><img src="/images/delete-icon.png" alt="trash icon" id="delete-project-button-live"></a>
+                </div>
             </div>
             <div class="tile">
                 <img src="<%= p.image %>">

@@ -153,6 +153,7 @@ nav > a:hover {
   align-items: center;
   margin: 3rem 0;
   border: 1px dashed black;
+  position: relative;
 }
 
 #live-feed-tile:nth-child(odd) {
@@ -165,6 +166,29 @@ nav > a:hover {
   flex-direction: row-reverse;
   background-color: rgb(207, 63, 138);
   color: rgb(73, 22, 48);
+}
+
+/* img#delete-project-button-live {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 55rem;
+}
+
+img#edit-project-button-live {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50rem;
+} */
+
+#edit-delete-buttons {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+img#delete-project-button-live, img#edit-project-button-live, img#see-more-project-button-live {
+  height: 4rem;
+  padding: 0.5rem;
 }
 
 .creator {
@@ -247,6 +271,27 @@ nav > a:hover {
   flex-direction: column;
   padding: 1rem;
   margin: 2rem 2rem;
+  position: relative;
+}
+
+#my-project-tile > img {
+  height: 50rem;
+}
+
+img#delete-project-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+img#edit-project-button {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+img#delete-project-button, img#edit-project-button {
+  height: 4rem;
 }
 
 .green {
@@ -259,9 +304,6 @@ nav > a:hover {
   border: 0.2rem solid darkblue;
 }
 
-#my-project-tile > img {
-  height: 50rem;
-}
 
 #my-project-tile > h5 {
   font-size: 3rem;
@@ -299,6 +341,7 @@ nav > a:hover {
 #project-details img {
   height: 10rem;
 }
+
 
 
 /* COMMENT SECTION */
@@ -364,6 +407,26 @@ nav > a:hover {
 
 #comment-content {
   overflow-wrap: anywhere;
+}
+
+#comment-delete-button > button {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem 1rem;
+  background-color: lightgrey;
+  border-color: darkgrey;
+}
+
+#comment-delete-button > button:hover {
+  background-color: lightblue;
+  border-color: navy;
+}
+
+#comment-delete-button > button > img {
+  height: 2.5rem;
 }
 
 /* ------- FOOTER SECTION ------- */

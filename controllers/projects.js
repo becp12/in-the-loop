@@ -7,6 +7,8 @@ module.exports = {
     create,
     show,
     delete: deleteProject,
+    update,
+    edit,
 }
 
 function index(req, res) {
@@ -63,3 +65,26 @@ function deleteProject(req, res) {
         }
     )
 };
+
+function update(req, res) {
+    Project.findOneAndUpdate({_id: req.params.id, creator: req.user},
+        // update object with updated properties
+        req.body,
+        // options object with new: true to make sure updated doc is returned
+        {new: true})
+        .populate('creator')
+        .exec(function(err, project) {
+            if (err || !project) return res.redirect('/projects');
+            res.redirect(`/projects/${project._id}`);
+        }
+    )
+}
+
+function edit(req, res) {
+    Project.findById(req.params.id)
+        .populate('creator')
+        .exec(function(err, project) {
+            if (err) return res.redirect('/projects/edit');
+            res.render('projects/update', {title: 'Update Project', project})
+    })
+}

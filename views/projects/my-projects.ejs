@@ -15,7 +15,7 @@
 
         <div id="my-project-tile" class="<%= p.complete ? 'green' : 'blue'%>">
             <% if (user && p.creator.equals(user._id)) { %>
-                <!-- <form id="project-edit-button" action="/projects/<%= p._id %>/edit" method="GET"><button type="submit"><img src="/images/edit-icon.png" alt="edit icon" id="edit-project-button"></button></form> -->
+                <a id="project-edit-button" href="/projects/<%= p._id %>/edit"><button><img src="/images/edit-icon.png" alt="edit icon" id="edit-project-button"></button></a>
                 <form id="project-delete-button" action="/projects/<%= p._id %>?_method=DELETE" method="POST"><button type="submit"><img src="/images/delete-icon.png" alt="trash icon" id="delete-project-button"></button></form>
             <% } %>
             <h5><%= p.title %></h5>

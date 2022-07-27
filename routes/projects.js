@@ -17,10 +17,14 @@ router.get('/my/new', isLoggedIn, projectsCtrl.new)
 // GET /posts/:id (show functionality)
 router.get('/:id', projectsCtrl.show)
 
+// GET /projects/:id/edit (edit functionality - update project)
+router.get('/:id/edit', projectsCtrl.edit);
+
 // POST /projects/my (create functionality)
 router.post('/my', isLoggedIn, projectsCtrl.create)
 
 // PUT /projects/:id (update functionality)
+router.put('/:id/update', projectsCtrl.update);
 
 // DELETE /projects/:id (delete functionality)
 router.delete('/:id', projectsCtrl.delete);

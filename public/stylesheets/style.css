@@ -188,7 +188,7 @@ img#edit-project-button-live {
 
 img#delete-project-button-live, img#edit-project-button-live, img#see-more-project-button-live {
   height: 4rem;
-  padding: 0.5rem;
+  padding: .5rem 1rem;
 }
 
 .creator {

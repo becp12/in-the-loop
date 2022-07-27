@@ -14,8 +14,10 @@
     <% projects.forEach(function(p) { %>
 
         <div id="my-project-tile" class="<%= p.complete ? 'green' : 'blue'%>">
-            <a href="#"><img src="/images/delete-icon.png" alt="trash icon" id="delete-project-button"></a>
-            <a href="#"><img src="/images/edit-icon.png" alt="edit icon" id="edit-project-button"></a>
+            <% if (user && p.creator.equals(user._id)) { %>
+                <!-- <form id="project-edit-button" action="/projects/<%= p._id %>/edit" method="GET"><button type="submit"><img src="/images/edit-icon.png" alt="edit icon" id="edit-project-button"></button></form> -->
+                <form id="project-delete-button" action="/projects/<%= p._id %>?_method=DELETE" method="POST"><button type="submit"><img src="/images/delete-icon.png" alt="trash icon" id="delete-project-button"></button></form>
+            <% } %>
             <h5><%= p.title %></h5>
             <p><b><i>Creator:</i></b> <%= user.name %></p>
             <img src="<%= p.image %>">

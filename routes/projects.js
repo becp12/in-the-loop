@@ -20,4 +20,9 @@ router.get('/:id', projectsCtrl.show)
 // POST /projects/my (create functionality)
 router.post('/my', isLoggedIn, projectsCtrl.create)
 
+// PUT /projects/:id (update functionality)
+
+// DELETE /projects/:id (delete functionality)
+router.delete('/:id', projectsCtrl.delete);
+
 module.exports = router;

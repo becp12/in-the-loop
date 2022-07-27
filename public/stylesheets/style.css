@@ -168,18 +168,6 @@ nav > a:hover {
   color: rgb(73, 22, 48);
 }
 
-/* img#delete-project-button-live {
-  position: absolute;
-  bottom: 0.5rem;
-  left: 55rem;
-}
-
-img#edit-project-button-live {
-  position: absolute;
-  bottom: 0.5rem;
-  left: 50rem;
-} */
-
 #edit-delete-buttons {
   display: flex;
   flex-direction: row;
@@ -278,20 +266,46 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
   height: 50rem;
 }
 
-img#delete-project-button {
-  position: absolute;
+/* img#delete-project-button {
+  position: relative;
   top: 0.5rem;
   right: 0.5rem;
-}
+} */
 
-img#edit-project-button {
+/* img#edit-project-button {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-}
+} */
 
 img#delete-project-button, img#edit-project-button {
   height: 4rem;
+}
+
+#project-delete-button {
+  right: 0.5rem;
+}
+
+#project-edit-button {
+  left: 0.5rem;
+}
+
+#project-edit-button, #project-delete-button {
+  position: absolute;
+  display: flex;
+  top: 0.5rem;
+  width: 6rem;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#project-delete-button > button, #project-edit-button > button {
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .green {

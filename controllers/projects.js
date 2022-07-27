@@ -6,6 +6,7 @@ module.exports = {
     new: newProject,
     create,
     show,
+    delete: deleteProject,
 }
 
 function index(req, res) {
@@ -52,4 +53,13 @@ Project.findById(req.params.id)
         .exec(function (err, project) {
             res.render('projects/show', { title: project.title, project} )
         });
+};
+
+function deleteProject(req, res) {
+    Project.findOneAndDelete({_id: req.params.id, creator: req.user._id})
+        .populate('creator')
+        .exec(function(err) {
+            res.redirect('/projects/my');
+        }
+    )
 };

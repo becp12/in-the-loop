@@ -1,5 +1,7 @@
 <%- include('../partials/header') %>
 
+<h1>Live Feed</h1>
+
 <div id="live-feed-container">
 <% if (projects.length) { %>
     <% for (let idx = 0; idx < projects.length; idx++) { %>
@@ -19,13 +21,11 @@
 
         <div id="live-feed-tile">
             <div class="details">
-                
-                <h5><%= p.title %></h5>
-                <div id="edit-delete-buttons">
+                <h5>
+                    <%= p.title %>
                     <a href="/projects/<%= p._id %>"><img src="/images/see-more-icon.png" alt="search icon" id="see-more-project-button-live"></a>
-                    <a href="#"><img src="/images/edit-icon.png" alt="edit icon" id="edit-project-button-live"></a>
-                    <a href="#"><img src="/images/delete-icon.png" alt="trash icon" id="delete-project-button-live"></a>
-                </div>
+                </h5>
+                <br>
                 <div class="creator">
                     <img src="<%= p.creator.avatar %>">
                     <p><%= p.creator.name %></p>

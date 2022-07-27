@@ -28,6 +28,12 @@ button:hover {
   color: darkgreen;
 }
 
+h1 {
+  text-align: center;
+  margin: 2rem 1rem 1rem;
+  font-size: 4rem;
+}
+
 /* ------- BANNER SECTION ------- */
 
 #banner {
@@ -208,6 +214,9 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
 
 .details > h5 {
   font-size: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* ------- MY PROJECTS SECTION ------- */
@@ -217,7 +226,6 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 5rem;
 }
 
 #my-project-header > h1 {
@@ -264,22 +272,12 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
 
 #my-project-tile > img {
   height: 50rem;
+  margin: 1.5rem 0;
 }
 
-/* img#delete-project-button {
-  position: relative;
-  top: 0.5rem;
-  right: 0.5rem;
-} */
-
-/* img#edit-project-button {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-} */
-
-img#delete-project-button, img#edit-project-button {
+img#delete-project-button, img#edit-project-button, img#see-more-project-button {
   height: 4rem;
+  width: 4rem;
 }
 
 #project-delete-button {
@@ -290,7 +288,11 @@ img#delete-project-button, img#edit-project-button {
   left: 0.5rem;
 }
 
-#project-edit-button, #project-delete-button {
+#project-see-more-button {
+  left: 7rem;
+}
+
+#project-edit-button, #project-delete-button, #project-see-more-button {
   position: absolute;
   display: flex;
   top: 0.5rem;
@@ -300,7 +302,7 @@ img#delete-project-button, img#edit-project-button {
   justify-content: center;
 }
 
-#project-delete-button > button, #project-edit-button > button {
+#project-delete-button > button, #project-edit-button > button, #project-see-more-button > button {
   display: flex;
   width: 6rem;
   height: 6rem;
@@ -338,6 +340,32 @@ img#delete-project-button, img#edit-project-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#show-title-detail {
+font-size: 3rem;
+  
+}
+
+#CRUDicons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#CRUDicons button, #CRUDicons button {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+#CRUDicons > a > button > img, #CRUDicons > form > button > img{
+  height: 3.5rem;
 }
 
 #show-creator-detail {

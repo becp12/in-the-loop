@@ -1,12 +1,17 @@
 <%- include('../partials/header') %>
 
+<h1><%= project.title %></h1>
+
 <div id="project-details">
-    <div id="show-title-creator">
-        <h2><%= project.title %></h2>
-        <div id="show-creator-detail">
-            <h4 ><%= project.creator.name %></h4>
-            <img src="<%= project.creator.avatar %>">
-        </div>
+    <div id="CRUDicons">
+        <% if (user && project.creator.equals(user._id)) { %>
+            <a id="my-project-edit-button" href="/projects/<%= project._id %>/edit"><button><img src="/images/edit-icon.png" alt="edit icon" id="edit-my-project-button"></button></a>
+            <form id="my-project-delete-button" action="/projects/<%= project._id %>?_method=DELETE" method="POST"><button type="submit"><img src="/images/delete-icon.png" alt="trash icon" id="delete-my-project-button"></button></form>
+        <% } %>
+    </div>
+    <div id="show-creator-detail">
+        <h4 ><%= project.creator.name %></h4>
+        <img src="<%= project.creator.avatar %>">
     </div>
     <div id="show-project-info">
         <div>

@@ -10,8 +10,9 @@ In this app, you can also see a Live Feed of all the other projects that other c
 
 ## Technologies Used
 * JavaScript
-* HTML (EJS - Embedded JavaScript)
+* HTML
 * CSS
+* EJS Templating
 * NodeJS
 * ExpressJS
 * MongoDB

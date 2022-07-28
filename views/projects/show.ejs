@@ -5,8 +5,16 @@
 <div id="project-details">
     <div id="CRUDicons">
         <% if (user && project.creator.equals(user._id)) { %>
-            <a id="my-project-edit-button" href="/projects/<%= project._id %>/edit"><button><img src="/images/edit-icon.png" alt="edit icon" id="edit-my-project-button"></button></a>
-            <form id="my-project-delete-button" action="/projects/<%= project._id %>?_method=DELETE" method="POST"><button type="submit"><img src="/images/delete-icon.png" alt="trash icon" id="delete-my-project-button"></button></form>
+            <a id="my-project-edit-button" href="/projects/<%= project._id %>/edit">
+                <button>
+                    <img src="/images/edit-icon.png" alt="edit icon" id="edit-my-project-button">
+                </button>
+            </a>
+            <form id="my-project-delete-button" action="/projects/<%= project._id %>?_method=DELETE" method="POST">
+                <button type="submit">
+                    <img src="/images/delete-icon.png" alt="trash icon" id="delete-my-project-button">
+                </button>
+            </form>
         <% } %>
     </div>
     <div id="show-creator-detail">
@@ -47,8 +55,12 @@
                     <p id="comment-author"><b><%= c.userName %></b></p>
                     <p id="comment-date"><%= c.createdAt.toLocaleDateString() %></p>
                     <p id="comment-content"><%= c.content %></p>
-                    <% if (user && c.user.equals(user._id)) { %>
-                        <form id="comment-delete-button" action="/comments/<%= c._id %>?_method=DELETE" method="POST"><button type="submit"><img src="/images/delete-icon.png" alt="delete icon"></button></form>
+                    <% if ( user&& c.user.equals(user._id)) { %>
+                        <form id="comment-delete-button" action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                            <button type="submit">
+                                <img src="/images/delete-icon.png" alt="delete icon">
+                            </button>
+                        </form>
                     <% } %>
                 </div>
                 

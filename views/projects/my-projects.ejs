@@ -16,9 +16,21 @@
 
         <div id="my-project-tile" class="<%= p.complete ? 'green' : 'blue'%>">
             <% if (user && p.creator.equals(user._id)) { %>
-                <a id="project-see-more-button" href="/projects/<%= p._id %>"><button><img src="/images/see-more-icon.png" alt="search icon" id="see-more-project-button"></button></a>
-                <a id="project-edit-button" href="/projects/<%= p._id %>/edit"><button><img src="/images/edit-icon.png" alt="edit icon" id="edit-project-button"></button></a>
-                <form id="project-delete-button" action="/projects/<%= p._id %>?_method=DELETE" method="POST"><button type="submit"><img src="/images/delete-icon.png" alt="trash icon" id="delete-project-button"></button></form>
+                <a id="project-see-more-button" href="/projects/<%= p._id %>">
+                    <button>
+                        <img src="/images/see-more-icon.png" alt="search icon" id="see-more-project-button">
+                    </button>
+                </a>
+                <a id="project-edit-button" href="/projects/<%= p._id %>/edit">
+                    <button>
+                        <img src="/images/edit-icon.png" alt="edit icon" id="edit-project-button">
+                    </button>
+                </a>
+                <form id="project-delete-button" action="/projects/<%= p._id %>?_method=DELETE" method="POST">
+                    <button type="submit">
+                        <img src="/images/delete-icon.png" alt="trash icon" id="delete-project-button">
+                    </button>
+                </form>
             <% } %>
             <h5><%= p.title %></h5>
             <p><b><i>Creator:</i></b> <%= user.name %></p>

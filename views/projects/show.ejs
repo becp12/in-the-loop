@@ -19,15 +19,15 @@
     </div>
     <div id="show-creator-detail">
         <img src="<%= project.creator.avatar %>">
-        <h4 ><%= project.creator.name %></h4>
+        <h4><%= project.creator.name %></h4>
     </div>
     <div id="show-project-info">
-        <div>
-            <p>Start Date:</p>
+        <div id="project-info-text">
+            <p><b><i>Start Date:</i></b></p>
             <p><%= project.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
-            <p>Difficulty:</p>
+            <p><b><i>Difficulty:</i></b></p>
             <p><%= project.difficulty %></p>
-            <p>Description:</p>
+            <p><b><i>Description</i></b></p>
             <p><%= project.description %></p>
         </div>
         <div>
@@ -35,7 +35,6 @@
         </div>
     </div>
 </div>
-
 <div>
     <h4>Comments</h4>
     <div id="comment">
@@ -66,7 +65,7 @@
                 
             <% }); %>
         <% } else { %>
-            <p>This project has no comments yet.</p>
+            <p class="no-comments">This project has no comments yet.</p>
         <% } %>
     </div>
 </div>

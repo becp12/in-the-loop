@@ -9,6 +9,8 @@ html {
 
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  position: relative;
+  margin-bottom: 5rem;
 }
 
 button {
@@ -32,12 +34,18 @@ h1 {
   text-align: center;
   margin: 2rem 1rem 1rem;
   font-size: 4rem;
+  color: #571f78;
+}
+
+h4 {
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 /* ------- BANNER SECTION ------- */
 
 #banner {
-  background-color: lightblue;
+  background-color: rgb(224, 184, 236);
   width: 100%;
   height: 11rem;
   display: flex;
@@ -55,11 +63,13 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid black;
-  color: #bb70e6;
-  background-color: aliceblue;
+  color: #7c70e6;
+  background-color: rgb(197, 239, 255);
   font-size: 2rem;
   height: 6rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 /* NOT LOGGED IN SELECTORS */
@@ -111,16 +121,32 @@ nav {
 /* OTHER NAV LINK STYLING */
 
 nav > a, nav > a:visited {
+  display: flex;
   text-decoration: none;
   align-items: center;
-  color: #bb70e6;
+  justify-content: center;
+  width: 10%;
+  color: #9370e6;
 }
 
 nav > a:hover {
+  display: flex;
   color: #571f78;
-  background-color: #d4aeeb;
+  background-color: rgb(189, 217, 228);
+  height: 100%;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
 }
 
+.active, .active:hover, .active:visited {
+  cursor: default;
+  height: 100%;
+  width: 10%;
+  background-color:rgb(224, 184, 236);
+  color: #571f78;
+  pointer-events: none;
+}
 
 /* ------- LIVE FEED SECTION ------- */
 
@@ -158,20 +184,19 @@ nav > a:hover {
   justify-content: space-between;
   align-items: center;
   margin: 3rem 0;
-  border: 1px solid black;
   position: relative;
 }
 
 #live-feed-tile:nth-child(odd) {
   flex-direction: row;
-  background-color: rgb(2, 216, 228);
-  color: rgb(0, 56, 59);
+  background-color: skyblue;
+  color: darkblue;
 }
 
 #live-feed-tile:nth-child(even) {
   flex-direction: row-reverse;
-  background-color: rgb(207, 63, 138);
-  color: rgb(73, 22, 48);
+  background-color:  lightgreen;
+  color: darkgreen;
 }
 
 #edit-delete-buttons {
@@ -389,15 +414,19 @@ font-size: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   font-size: 2rem;
-}
-
-#show-project-info > div {
-  margin: 1rem 6rem;
+  width: 50%;
 }
 
 #show-project-info > div > img {
   height: 40rem;
+}
+
+#project-info-text {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 50rem;
 }
 
 /* COMMENT SECTION */
@@ -485,6 +514,12 @@ font-size: 3rem;
   height: 2.5rem;
 }
 
+.no-comments {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0 3rem 0;
+}
+
 /* ------- NEW/EDIT PAGES ------- */
 .edit-new-form {
   display: grid;
@@ -509,9 +544,15 @@ font-size: 3rem;
 
 /* ------- FOOTER SECTION ------- */
 footer {
-  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  height: 3rem;
   text-align: center;
   width: 100%;
   border: 1px solid black;
   padding: 2rem;
+  background-color: rgb(197, 239, 255);
 }

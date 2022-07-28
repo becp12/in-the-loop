@@ -22,7 +22,7 @@
             <% } %>
             <h5><%= p.title %></h5>
             <p><b><i>Creator:</i></b> <%= user.name %></p>
-            <img src="<%= p.image %>">
+            <img src="<%= (p.image) ? p.image : '/images/yarn-ball.png' %>">
             <p><b><i>Start Date:</i></b> <%= p.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
             <p><b><i>Difficulty:</i></b> <%= p.difficulty %></p>
             <p><b><i>Description:</i></b> <%= p.description %></p>

@@ -6,8 +6,8 @@
     <label>Title:</label>
     <input type="text" name="title" required>
     
-    <label>Image (link to image):</label>
-    <input type="text" name="image">
+    <label>Image: <span class="smaller-text"> (link to image, accepts .jpeg, .jpg, .png or .gif)</span></label>
+    <input type="text" name="image" title="Must start with 'https://' and end with '.jpg', '.jpeg', '.png', or '.gif'" pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$">
     
     <label>Start Date:</label>
     <input type="datetime-local" name="startDate" value="<%= defaultStartDate %>">

@@ -13,7 +13,10 @@ const commentSchema = new Schema({
 const projectSchema = new Schema({
     creator: {type: Schema.Types.ObjectId, ref: 'User'},
     title: String,
-    image: [String],
+    image: {
+        type: String,
+        match: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$/
+    },
     startDate: {
         type: Date,
         default: function() {

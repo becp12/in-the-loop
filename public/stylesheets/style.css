@@ -483,6 +483,28 @@ font-size: 3rem;
   height: 2.5rem;
 }
 
+/* ------- NEW/EDIT PAGES ------- */
+.edit-new-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7 1fr);
+  margin: 0 auto;
+  width: 50%;
+}
+
+.edit-new-form > * {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.edit-new-form > input[type=submit] {
+  grid-column: span 2;
+}
+
+.smaller-text {
+  font-size: 1.5rem;
+}
+
 /* ------- FOOTER SECTION ------- */
 footer {
   height: 5rem;

@@ -48,7 +48,6 @@
                     <p id="comment-date"><%= c.createdAt.toLocaleDateString() %></p>
                     <p id="comment-content"><%= c.content %></p>
                     <% if (user && c.user.equals(user._id)) { %>
-                        <!-- <form id="comment-delete-button" action="/comments/<%= c._id %>?_method=DELETE" method="POST"><input type="submit" value="Delete"></input></form> -->
                         <form id="comment-delete-button" action="/comments/<%= c._id %>?_method=DELETE" method="POST"><button type="submit"><img src="/images/delete-icon.png" alt="delete icon"></button></form>
                     <% } %>
                 </div>

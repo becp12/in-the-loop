@@ -52,8 +52,8 @@ function create(req, res) {
 function show(req, res) {
 Project.findById(req.params.id)
         .populate('creator')
-        .exec(function (err, project) {
-            res.render('projects/show', { title: project.title, project} )
+        .exec(function(err, project) {
+            res.render('projects/show', { title: project.title, project })
         });
 };
 

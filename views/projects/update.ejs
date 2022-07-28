@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 
-<h1>Update <%= project.title</h1>
+<h1>Update <%= project.title %></h1>
 
-<form action="/projects/<%= project.id %>/update?_method=PUT" method="POST">
+<form class="edit-new-form" action="/projects/<%= project.id %>/update?_method=PUT" method="POST">
     <label>Title:</label>
     <input type="text" name="title" value="<%= project.title %>" required>
     
-    <label>Image (link to image):</label>
-    <input type="text" name="image" value="<%= project.image %>>">
+    <label>Image <span class="smaller-text">(link to image):</span></label>
+    <input type="text" name="image" value="<%= project.image %>">
     
     <label>Start Date:</label>
     <input type="datetime-local" name="startDate" value="<%= startDate %>" required>
@@ -21,7 +21,7 @@
         <option value="Experienced">Experienced</option>
     </select>
     
-    <label>Description (eg. Details, stiches used, pattern link, etc):</label>
+    <label>Description <span class="smaller-text">(eg. Details, stiches used, pattern link, etc):</span></label>
     <input type="text" name="description" value="<%= project.description %>">
 
     <label>Complete:</label>

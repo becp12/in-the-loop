@@ -6,7 +6,7 @@ const isLoggedIn = require('../config/auth');
 // All routes "start with" / (from server.js)
 
 // POST /:id/comments (create functionality)
-router.post('/:id/comments', isLoggedIn, commentsCtrl.create);
+router.post('/projects/:id/comments', isLoggedIn, commentsCtrl.create);
 
 // DELETE /comments/:id (delete functionality)
 router.delete('/comments/:id', isLoggedIn, commentsCtrl.delete);

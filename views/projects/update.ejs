@@ -6,8 +6,9 @@
     <label>Title:</label>
     <input type="text" name="title" value="<%= project.title %>" required>
     
-    <label>Image <span class="smaller-text"> (link to image, accepts .jpeg, .jpg, .png or .gif):</span></label>
-    <input type="text" name="image" value="<%= project.image %>" title="Must start with 'https://' and end with '.jpg', '.jpeg', '.png', or '.gif'" pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$">
+    <label>Image <span class="smaller-text"> (link to image, accepts .jpeg, .jpg, .png, .gif, or .svg):</span></label>
+    <input type="text" name="image" value="<%= project.image %>" title="Must be a website and end with '.jpg', '.jpeg', '.png', '.gif' or '.svg'" pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$">
+    <!-- Used this link to get this RegEx: https://stackoverflow.com/a/51493215/19302610 -->
     
     <label>Start Date:</label>
     <input type="datetime-local" name="startDate" value="<%= startDate %>" required>

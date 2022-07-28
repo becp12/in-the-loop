@@ -16,6 +16,7 @@ const projectSchema = new Schema({
     image: {
         type: String,
         match: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$/
+        // Used this link to get this RegEx: https://stackoverflow.com/a/51493215/19302610
     },
     startDate: {
         type: Date,

@@ -18,15 +18,15 @@ router.get('/my/new', isLoggedIn, projectsCtrl.new)
 router.get('/:id', projectsCtrl.show)
 
 // GET /projects/:id/edit (edit functionality - update project)
-router.get('/:id/edit', projectsCtrl.edit);
+router.get('/:id/edit', isLoggedIn, projectsCtrl.edit);
 
 // POST /projects/my (create functionality)
 router.post('/my', isLoggedIn, projectsCtrl.create)
 
 // PUT /projects/:id (update functionality)
-router.put('/:id/update', projectsCtrl.update);
+router.put('/:id/update', isLoggedIn, projectsCtrl.update);
 
 // DELETE /projects/:id (delete functionality)
-router.delete('/:id', projectsCtrl.delete);
+router.delete('/:id', isLoggedIn, projectsCtrl.delete);
 
 module.exports = router;

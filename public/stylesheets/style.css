@@ -158,7 +158,7 @@ nav > a:hover {
   justify-content: space-between;
   align-items: center;
   margin: 3rem 0;
-  border: 1px dashed black;
+  border: 1px solid black;
   position: relative;
 }
 
@@ -202,6 +202,7 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
   height: 40rem;
   display: flex;
   align-self: center;
+  margin: 1rem;
 }
 
 .details {
@@ -268,6 +269,7 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
   padding: 1rem;
   margin: 2rem 2rem;
   position: relative;
+  width: 52.5rem;
 }
 
 #my-project-tile > img {

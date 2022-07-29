@@ -5,8 +5,17 @@ My app is designed for crocheters to track their projects. Most crocheters will 
 In this app, you can also see a Live Feed of all the other projects that other crocheters have on the go. This makes it a great place to source inspiration for your next project and share you completed or ongoing projects.
 
 ## Screenshots
+Landing Page - Must login to view more than the two most recent posts - can see all posts from all users
+![Screenshot of Landing View](https://i.imgur.com/sThL0Ji.png)
 
+My Projects Page - Can only see projects you have posted yourself and are the only one who can edit/delete your projects
+![Screenshot of My Projects View](https://i.imgur.com/oqsz3k9.png)
 
+New Project Page - The Update Project page looks very similar but data is prefilled with information already saved in the project
+![Screenshot of New Project View](https://i.imgur.com/HZt7pv2.png)
+
+Show Project View - The update and delete buttons are only visible to the creator of the project
+![Screenshot of Show View](https://i.imgur.com/4V0ZniZ.png)
 
 ## Technologies Used
 * JavaScript

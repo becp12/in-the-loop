@@ -44,7 +44,10 @@ function create(req, res) {
     const project = new Project(req.body);
     project.creator = res.locals.user;
     project.save(function(err) {
-        if (err) return res.redirect('/projects/my/new');
+        if (err) {
+            console.log("project.create:" + err)
+            return res.redirect('/projects/my/new');
+        }
         res.redirect('/projects/my');
     })
 }

@@ -67,6 +67,10 @@ function deleteProject(req, res) {
 };
 
 function update(req, res) {
+    req.body.complete = !!req.body.complete;
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+    }
     Project.findOneAndUpdate({_id: req.params.id, creator: req.user},
         // update object with updated properties
         req.body,

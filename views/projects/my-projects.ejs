@@ -35,10 +35,16 @@
             <h5><%= p.title %></h5>
             <p><b><i>Creator:</i></b> <%= user.name %></p>
             <img class="default-picture" src="<%= (p.image) ? p.image : '/images/yarn-ball-copy.png' %>">
-            <p><b><i>Start Date:</i></b> <%= p.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
-            <p><b><i>Difficulty:</i></b> <%= p.difficulty %></p>
-            <p><b><i>Description:</i></b> <%= p.description %></p>
-            <p><b><i>Complete:</i></b> <%= p.complete ? 'Yes' : 'In Progress' %></p>
+            <div class="my-projects-details">
+                <p><b><i>Start Date:</i></b></p>
+                <p><%= p.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
+                <p><b><i>Difficulty:</i></b></p>
+                <p><%= p.difficulty %></p>
+                <p><b><i>Description:</i></b></p>
+                <p class="text-overflow"><%= p.description %></p>
+                <p><b><i>Complete:</i></b></p>
+                <p><%= p.complete ? 'Yes' : 'In Progress' %></p>
+            </div>
         </div>
 
     <% }) %>

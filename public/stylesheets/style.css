@@ -235,7 +235,7 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
   flex-direction: column;
   font-size: 3rem;
   text-align: left;
-  padding: 0 5rem;
+  padding: 5rem 5rem;
 }
 
 .details > h5 {
@@ -243,6 +243,7 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
 }
 
 /* ------- MY PROJECTS SECTION ------- */
@@ -280,7 +281,7 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
 #my-project-container {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
@@ -294,7 +295,11 @@ img#delete-project-button-live, img#edit-project-button-live, img#see-more-proje
   padding: 1rem;
   margin: 2rem 2rem;
   position: relative;
-  width: 52.5rem;
+  width: 70rem;
+  height: auto;
+  text-align: center;
+  /* overflow: auto; */
+  /* overflow-wrap: anywhere; */
 }
 
 #my-project-tile > img {
@@ -354,6 +359,27 @@ img#delete-project-button, img#edit-project-button, img#see-more-project-button 
 
 #my-project-tile > p {
   font-size: 2rem;
+}
+
+.my-projects-details {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 3fr;
+  text-align: left;
+  font-size: 2rem;
+  width: 95%;
+  height: 95%;
+}
+
+.my-projects-details > * {
+  margin: 0.5rem;
+}
+
+.text-overflow {
+  overflow-wrap: anywhere;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #no-projects {

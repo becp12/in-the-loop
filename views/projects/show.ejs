@@ -27,8 +27,10 @@
             <p><%= project.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
             <p><b><i>Difficulty:</i></b></p>
             <p><%= project.difficulty %></p>
-            <p><b><i>Description</i></b></p>
+            <p><b><i>Description:</i></b></p>
             <p><%= project.description %></p>
+            <p><b><i>Complete:</i></b></p>
+            <p><%= project.complete ? 'Yes' : 'In Progress' %></p>
         </div>
         <div>
             <img src="<%= (project.image) ? project.image : '/images/yarn-ball-copy.png' %>">

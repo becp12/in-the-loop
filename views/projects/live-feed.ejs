@@ -1,56 +1,64 @@
 <%- include('../partials/header') %>
 
-<h1>Live Feed</h1>
+    <h1>Live Feed</h1>
 
-<div id="live-feed-container">
-<% if (projects.length) { %>
-    <% for (let idx = 0; idx < projects.length; idx++) { %>
-        <% const p = projects[idx]; %>
-        <% if (idx > 1 && !user) { %>
-            <div id="more-login">
-                <p>Log in with Google to see more posts</p>
-                <a href="/auth/google">
-                    <button>
-                        <img class="google-icon" src="https://i.imgur.com/FHjYyi0.png">
-                        <p>&nbsp;Log In</p>
-                    </button>
-                </a>
-            </div>
-            <% break; %>
+    <div id="live-feed-container">
+        <% if (projects.length) { %>
+            <% for (let idx=0; idx < projects.length; idx++) { %>
+                <% const p=projects[idx]; %>
+                <% if (idx> 1 && !user) { %>
+                    <div id="more-login">
+                        <p>Log in with Google to see more posts</p>
+                        <a href="/auth/google">
+                            <button>
+                                <img class="google-icon" src="https://i.imgur.com/FHjYyi0.png">
+                                <p>&nbsp;Log In</p>
+                            </button>
+                        </a>
+                    </div>
+                    <% break; %>
+                <% } %>
+                    <div id="live-feed-tile">
+                        <div class="details">
+                            <h5>
+                                <%= p.title %>
+                                    <a href="/projects/<%= p._id %>"><img src="/images/see-more-icon.png"
+                                        alt="search icon" id="see-more-project-button-live"></a>
+                            </h5>
+                            <br>
+                            <div class="creator">
+                                <img src="<%= p.creator.avatar %>">
+                                <p>
+                                    <%= p.creator.name %>
+                                </p>
+                            </div>
+                            <br>
+                            <div class="my-projects-details">
+                                <p><b><i>Start Date:</i></b></p>
+                                <p>
+                                    <%= p.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %>
+                                </p>
+                                <p><b><i>Difficulty:</i></b></p>
+                                <p>
+                                    <%= p.difficulty %>
+                                </p>
+                                <p><b><i>Description:</i></b></p>
+                                <p class="text-overflow">
+                                    <%= p.description %>
+                                </p>
+                                <p><b><i>Complete:</i></b></p>
+                                <p>
+                                    <%= p.complete ? 'Yes' : 'In Progress' %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <img src="<%= (p.image) ? p.image : '/images/yarn-ball-copy.png' %>">
+                        </div>
+                    </div>
+            <% } %>
+        <% } else { %>
+            <p id="no-projects">There are no posts to show</p>
         <% } %>
-
-        <div id="live-feed-tile">
-            <div class="details">
-                <h5>
-                    <%= p.title %>
-                    <a href="/projects/<%= p._id %>"><img src="/images/see-more-icon.png" alt="search icon" id="see-more-project-button-live"></a>
-                </h5>
-                <br>
-                <div class="creator">
-                    <img src="<%= p.creator.avatar %>">
-                    <p><%= p.creator.name %></p>
-                </div>
-                <br>
-                <div class="my-projects-details">
-                    <p><b><i>Start Date:</i></b></p>
-                    <p><%= p.startDate.toLocaleString('en-US', { dateStyle: 'full' }) %></p>
-                    <p><b><i>Difficulty:</i></b></p>
-                    <p><%= p.difficulty %></p>
-                    <p><b><i>Description:</i></b></p>
-                    <p class="text-overflow"><%= p.description %></p>
-                    <p><b><i>Complete:</i></b></p>
-                    <p><%= p.complete ? 'Yes' : 'In Progress' %></p>
-                </div>
-            </div>
-            <div class="tile">
-                <img src="<%= (p.image) ? p.image : '/images/yarn-ball-copy.png' %>">
-            </div>
-        </div>
-        
-    <% } %>
-
-<% } else { %>
-    <p id="no-projects">There are no posts to show</p>
-<% } %>
-</div>
-<%- include('../partials/footer') %>
+    </div>
+    <%- include('../partials/footer') %>

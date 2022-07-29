@@ -35,6 +35,8 @@ Show Project View - The update and delete buttons are only visible to the creato
 
 [Click to open In The Loop - Crochet Project Tracker](https://in-the-loop-crochet.herokuapp.com/projects)
 
+[Click to open Trello Board used to Project Planning](https://trello.com/b/WLhJuRDH/project-2)
+
 ## Potential Future Enhancements
 * AAU, when I post my project, I want to choose if it's private or public visibility
 * AAU, when I see projects, I want to be able to press a Like button

@@ -33,7 +33,7 @@ Show Project View - The update and delete buttons are only visible to the creato
 
 ## Getting Started
 
-[Click to open In The Loop - Crochet Project Tracker](https://in-the-loop-crochet.herokuapp.com/projects)
+[Click to open In The Loop - Crochet Project Tracker](https://in-the-loop.azurewebsites.net/projects)
 
 [Click to open Trello Board used to Project Planning](https://trello.com/b/WLhJuRDH/project-2)
 
